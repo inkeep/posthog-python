@@ -12,7 +12,7 @@ try:
 except ImportError:
     from Queue import Empty
 
-MAX_MSG_SIZE = 32 << 10
+MAX_MSG_SIZE = 1 << 19  # 512KB
 
 # Our servers only accept batches less than 500KB. Here limit is set slightly
 # lower to leave space for extra data that will be added later, eg. "sentAt".
